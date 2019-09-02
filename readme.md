@@ -8,7 +8,7 @@
 
 不得不说，从零开始学习数据结构和算法，对于非科班出身的程序员来说，还是存在一定困难。我觉得最大的困难是缺乏一个行之有效的学习思路。这个项目希望通过我，由浅入深的学习数据结构和算法给大家一个借鉴，祝福每个希望学好数据结构和算法的程序员能够找到自己在学习这方面知识的合理方法。
 
-## 学习阶段：
+## 学习阶段
 
 1. 对于基础概念的认识和理解
 2. 对于基本数据结构的认识和理解
@@ -17,23 +17,20 @@
 5. 学习十大经典排序算法，理解、掌握
 6. 认识五大经典算法，理解、掌握、运用
 
-
-## 学习方法：
+## 学习方法
 
 1. 合理的运用网络资源，baidu、Github、Google都是很不错的老师，Github上有很多不错的关于数据结构和算法学习的项目。
 2. 合理的运用网上的一些刷题网站，例如leetcode、牛客网，学以致用是快速掌握知识的方法之一，刷题的方法是由浅入深并且分门别类，这样能够起到更好的训练作用。
 3. 正确对待网上推荐的一些所谓数据结构和算法学习的经典书籍，我认为这些书籍在建立基础的知识体系之后，在进行深入阅读会更容易理解，也比较不容易被劝退。
 4. 要建立起自己的知识体系，就少不了一定的总结，可以通过建立自己Github数据结构和算法项目，或者各种云笔记工具，不断积累自己的学习所得。
 
-## 推荐书籍：
+## 推荐书籍
 
 > 虽然不推荐大家一开始就阅读相关的经典权威著作，但是对于学有余力，亦或者有了一定的基础的同学来说，啃大部头确实是件大有裨益的事情。
 
-
 ## 数据结构基本概念
 
-
-### 首先要理解什么是数据？
+### 首先要理解什么是数据
 
 ![data image](./assets/ZVFbuq.png "data image")
 
@@ -45,7 +42,7 @@
 抽象的理解，万物皆数据。想象一下在《黑客帝国》中，看起来真实的不行的世界其实是Matrix制造出的虚拟世界，那个世界里面的一切都是数据堆砌起来的。
 ![Matrix](./assets/20190902170538.jpg "Matrix")
 
-### 其次，什么是数据结构？
+### 其次，什么是数据结构?
 
 比较正式的定义如下：
 > 数据结构就是研究数据的逻辑结构和物理结构以及它们之间相互关系，并对这种结构定义相应的运算，而且确保经过这些运算后所得到的新结构仍然是原来的结构类型。
@@ -71,8 +68,31 @@
 * 树形结构: 数据元素之间一对多的关系
 * 图状结构或网状结构: 结构中的数据元素之间存在多对多的关系
 
-
 物理结构/存储结构：数据在计算机中的表示。物理结构是描述数据具体在内存中的存储（如：顺序结构、链式结构、索引结构、哈希结构）等
 
 数据结构的基本操作的设置的最重要的准则是,实现应用程序与存储结构的独立。实现应用程序是“逻辑结构”，存储的是“物理结构”。逻辑结构主要是对该结构操作的设定，物理结构是描述数据具体在内存中的存储（如：顺序结构、链式结构、索引结构、希哈结构）等。
 顺序存储结构中，线性表的逻辑顺序和物理顺序总是一致的。但在链式存储结构中，线性表的逻辑顺序和物理顺序一般是不同的。
+
+就目前而言,这些基础概念已经足够使用，贪多嚼不烂。
+
+## 各种数据结构学习目录
+
+`B` - 初学者， `A` - 进阶
+
+* `B` [链表](src/data-structures/linked-list/README.zh-CN.md)
+* `B` [双向链表](src/data-structures/doubly-linked-list/README.zh-CN.md)
+* `B` [队列](src/data-structures/queue/README.zh-CN.md)
+* `B` [栈](src/data-structures/stack/README.zh-CN.md)
+* `B` [哈希表](src/data-structures/hash-table/README.zh-CN.md)
+* `B` [堆](src/data-structures/heap/README.zh-CN.md) - 最大堆 & 最小堆
+* `B` [优先队列](src/data-structures/priority-queue/README.zh-CN.md)
+* `A` [字典树](src/data-structures/trie/README.zh-CN.md)
+* `A` [树](src/data-structures/tree/README.zh-CN.md)
+  * `A` [二叉查找树](src/data-structures/tree/binary-search-tree)
+  * `A` [AVL 树](src/data-structures/tree/avl-tree)
+  * `A` [红黑树](src/data-structures/tree/red-black-tree)
+  * `A` [线段树](src/data-structures/tree/segment-tree) - 使用 `最小/最大/总和` 范围查询示例
+  * `A` [树状数组](src/data-structures/tree/fenwick-tree) (二叉索引树)
+* `A` [图](src/data-structures/graph/README.zh-CN.md) (有向图与无向图)
+* `A` [并查集](src/data-structures/disjoint-set)
+* `A` [布隆过滤器](src/data-structures/bloom-filter)
