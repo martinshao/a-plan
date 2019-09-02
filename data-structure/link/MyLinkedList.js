@@ -46,7 +46,12 @@ MyLinkedList.prototype.addAtHead = function(val) {
  * @return {void}
  */
 MyLinkedList.prototype.addAtTail = function(val) {
-    
+    let current = this.head;
+    let newNode = new Node(val);
+    while(current.next) {
+        current = current.next;
+    }
+    current.next = newNode;
 };
 
 /**
@@ -57,8 +62,18 @@ MyLinkedList.prototype.addAtTail = function(val) {
  */
 MyLinkedList.prototype.addAtIndex = function(index, val) {
     let current = this.head;
+    let newNode = new Node(val);
+    if(index < 0) {
+        newNode.next = current.next;
+        current.next = newNode
+    }
     for (let i = 0; i < index + 1; i++) {
-        
+        if(index === i) {
+            newNode.next = current.next;
+            current.next = newNode
+        }
+        else if (current) current = current.next;
+        else return -1
     }
 };
 
@@ -68,7 +83,12 @@ MyLinkedList.prototype.addAtIndex = function(index, val) {
  * @return {void}
  */
 MyLinkedList.prototype.deleteAtIndex = function(index) {
-    
+    let current = this.head;
+    for (let i = 0; i < index + 1; i++) {
+        if(index === i)  current.next = current.next.next;
+        else if (current) current = current.next;
+        else return -1
+    }
 };
 
 /** 
@@ -81,8 +101,10 @@ MyLinkedList.prototype.deleteAtIndex = function(index) {
  * obj.deleteAtIndex(index)
  */
 
- let linkedList = new MyLinkedList();
-linkedList.addAtHead('Shanghai');
-linkedList.addAtHead('Hangzhou');
-linkedList.addAtHead('Guangzhou');
+let linkedList = new MyLinkedList();
+linkedList.addAtHead('Hefei');
+// linkedList.addAtHead('Beijing');
+// linkedList.addAtHead('Shanghai');
+// linkedList.addAtHead('Hangzhou');
+// linkedList.addAtHead('Guangzhou');
 
