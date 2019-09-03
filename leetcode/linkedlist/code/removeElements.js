@@ -10,12 +10,21 @@
  * @param {number} val
  * @return {ListNode}
  */
-var removeElements = function ($head, $val) {
-    if ($head == null) {
-      return null;
-    }
-    $head.next = this.removeElements($head.next, $val);
-    return $head.val == $val ? $head.next : $head;
+// var removeElements = function (head, val) {
+//   if (head == null) {
+//     return null;
+//   }
+//   head.next = this.removeElements(head.next, val);
+//   return head.val == val ? head.next : head;
+// };
+
+var removeElements = function (head, val) {
+  if (head == null) {
+    return null;
+  }
+  head.next = this.removeElements(head.next, val);
+  return head.val == val ? head.next : head;
 };
 
 const linkedlist = removeElements(l1, 2);
+console.info(linkedlist);

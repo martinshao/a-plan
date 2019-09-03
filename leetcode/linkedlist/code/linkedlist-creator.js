@@ -34,7 +34,7 @@ function LinkedListToArray(linkedList) {
   return array;
 }
 
-let l1 = ArrayToLinkedList([1, 2, 4, 3, 1]);
+let l1 = ArrayToLinkedList([1, 2, 4, 3, 6]);
 let l2 = ArrayToLinkedList([1, 2]);
 /**
  * @param {ListNode} l1
