@@ -1,5 +1,8 @@
 # 十大排序算法总结（JavaScript实现）
 
+![](../../assets/1212.png)
+![](../../assets/20191021205438.png)
+
 ``` js
 function swap(arr, i, j) {
   var temp = arr[i];
@@ -13,16 +16,14 @@ function swap(arr, i, j) {
 ```
 
 ## 冒泡排序
-
+![](https://images2017.cnblogs.com/blog/849589/201710/849589-20171015223238449-2146169197.gif)
 ``` js
 function bubbleSort(arr) {
   var len = arr.length;
   for (var i = 0; i < len - 1; i++) {
     for (var j = 0; j < len - 1 - i; j++) {
       if (arr[j] > arr[j + 1]) {
-        var temp = arr[j + 1];
-        arr[j + 1] = arr[j];
-        arr[j] = temp;
+        swap(arr, j, j+1);
       }
     }
   }
@@ -30,29 +31,8 @@ function bubbleSort(arr) {
 }
 ```
 
-## 选择排序
-
-``` js
-function selectionSort(arr) {
-  var len = arr.length;
-  var minIndex, temp;
-  for (var i = 0; i < len - 1; i++) {
-    minIndex = i;
-    for (var j = i + 1; j < len; j++) {
-      if (arr[j] < arr[minIndex]) {
-        minIndex = j;
-      }
-    }
-    temp = arr[i];
-    arr[i] = arr[minIndex];
-    arr[minIndex] = temp;
-  }
-  return arr;
-} 
-```
-
 ## 插入排序
-
+![](https://images2017.cnblogs.com/blog/849589/201710/849589-20171015225645277-1151100000.gif)
 ``` js
 function insertionSort(arr) {
   let len = arr.length;
@@ -68,6 +48,25 @@ function insertionSort(arr) {
   }
   return arr;
 }
+```
+
+## 选择排序
+![](https://images2017.cnblogs.com/blog/849589/201710/849589-20171015224719590-1433219824.gif)
+``` js
+function selectionSort(arr) {
+  var len = arr.length;
+  var minIndex, temp;
+  for (var i = 0; i < len - 1; i++) {
+    minIndex = i;
+    for (var j = i + 1; j < len; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
+      }
+    }
+    swap(arr, i, minIndex);
+  }
+  return arr;
+} 
 ```
 
 ## 希尔排序
@@ -94,7 +93,7 @@ function shellSort(arr) {
 ```
 
 ## 归并排序
-
+![](https://images2017.cnblogs.com/blog/849589/201710/849589-20171015230557043-37375010.gif)
 ``` js
 function mergeSort(arr) {
   var len = arr.length;
@@ -129,7 +128,7 @@ function merge(left, right) {
 ```
 
 ## 快速排序
-
+![](https://images2017.cnblogs.com/blog/849589/201710/849589-20171015230936371-1413523412.gif)
 ``` js
 function quickSort(arr, left, right) {
   var len = arr.length,
