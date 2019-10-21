@@ -9,8 +9,8 @@ function buildMaxHeap(arr) {   // 建立大顶堆
 
 function heapify(arr, i) {     // 堆调整
   var left = 2 * i + 1,
-    right = 2 * i + 2,
-    largest = i;
+      right = 2 * i + 2,
+      largest = i;
 
   if (left < len && arr[left] > arr[largest]) {
     largest = left;
