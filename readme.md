@@ -97,3 +97,18 @@
 * `A` [图](src/data-structures/graph/README.zh-CN.md) (有向图与无向图)
 * `A` [并查集](src/data-structures/disjoint-set)
 * `A` [布隆过滤器](src/data-structures/bloom-filter)
+
+# 算法学习
+
+## Youtube学习资料
+
+* [计算机教程分享][1]
+
+[1]: https://www.youtube.com/channel/UCPmmZVMYWYdycL5uu6SmSog
+
+
+## 学习算法的好网站
+
+* [VisuAlgo][101]数据结构和算法动态可视化 (Chinese)
+
+[101]: https://visualgo.net/zh

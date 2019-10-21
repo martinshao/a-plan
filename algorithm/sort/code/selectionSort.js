@@ -9,7 +9,7 @@ function CArray(numElements) {
   this.swap = swap;
   this.bubbleSort = bubbleSort;
 
-  for(var i = 0; i < numElements; ++i) {
+  for (var i = 0; i < numElements; ++i) {
     this.dataStore[i] = i;
   }
 }
@@ -34,7 +34,7 @@ function toString() {
   let retstr = '';
   for (let i = 0; i < this.dataStore.length; i++) {
     retstr += this.dataStore[i] + ' ';
-    if(i > 0 && i % 10 ==0) {
+    if (i > 0 && i % 10 == 0) {
       retstr += '\n';
     }
   }
@@ -49,10 +49,10 @@ function swap(arr, index1, index2) {
 
 function selectionSort() {
   let min, temp;
-  for(var outer = 0; outer <= this.dataStore.length - 2; ++outer) {
+  for (var outer = 0; outer <= this.dataStore.length - 2; ++outer) {
     min = outer;
-    for(let inner = outer + 1; inner <= this.dataStore.length - 1; ++innter) {
-      if(this.dataStore[inner] < this.dataStore[min]) {
+    for (let inner = outer + 1; inner <= this.dataStore.length - 1; ++innter) {
+      if (this.dataStore[inner] < this.dataStore[min]) {
         min = inner;
       }
       swap(this.dataStore, outer, min);
@@ -72,15 +72,42 @@ function selectionSort(arr) {
   var len = arr.length;
   var minIndex, temp;
   for (var i = 0; i < len - 1; i++) {
-      minIndex = i;
-      for (var j = i + 1; j < len; j++) {
-          if (arr[j] < arr[minIndex]) {     // 寻找最小的数
-              minIndex = j;                 // 将最小数的索引保存
-          }
+    minIndex = i;
+    for (var j = i + 1; j < len; j++) {
+      if (arr[j] < arr[minIndex]) {     // 寻找最小的数
+        minIndex = j;                 // 将最小数的索引保存
       }
-      temp = arr[i];
-      arr[i] = arr[minIndex];
-      arr[minIndex] = temp;
+    }
+    temp = arr[i];
+    arr[i] = arr[minIndex];
+    arr[minIndex] = temp;
   }
   return arr;
-} 
+}
+
+function selectionSort(arr) {
+  var len = arr.length;
+  var minIndex, temp;
+  for (var i = 0; i < len - 1; i++) {
+    minIndex = i;
+    for (var j = i + 1; j < len; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
+      }
+    }
+    temp = arr[i];
+    arr[i] = arr[minIndex];
+    arr[minIndex] = temp;
+  }
+  return arr;
+}
+
+function swap(arr, i, j) {
+  var temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
+function swap(arr, i, j) {
+  [arr[i], arr[j]] = [arr[j], arr[i]]
+}
