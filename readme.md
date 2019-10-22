@@ -88,8 +88,7 @@
 
 ![](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29)
 
-
-
+![](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5Cfn_phv%20%5Clarge%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29)
 
 
 ### 首先要理解什么是数据
