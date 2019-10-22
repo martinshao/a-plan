@@ -86,9 +86,7 @@
   * 最坏情况复杂度 ![](http://latex.codecogs.com/gif.latex?T_%7Bworst%7D%28n%29)
   * 平均复杂度 ![](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20T_%7Bavg%7D%28n%29)
 
-![](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29)
-
-![](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5Cfn_phv%20%5Clarge%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29)
+<div align=center>![](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5Cfn_phv%20%5Clarge%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29)
 
 
 ### 首先要理解什么是数据
@@ -101,6 +99,7 @@
 数据类型：在一种程序设计语言中，变量所具有的数据种类。整型、浮点型、字符型等等
 
 抽象的理解，万物皆数据。想象一下在《黑客帝国》中，看起来真实的不行的世界其实是Matrix制造出的虚拟世界，那个世界里面的一切都是数据堆砌起来的。
+
 ![Matrix](./assets/20190902170538.jpg "Matrix")
 
 ### 其次，什么是数据结构
