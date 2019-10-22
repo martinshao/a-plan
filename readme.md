@@ -90,11 +90,11 @@
 
 ## 复杂的渐进表示法
 
-* $T(n) = O(f(n))$ 表示存在常数 $C>0$，$n_0>0$ 使得当 $n \geq n_0$ 时有 $T(n) \leq C \cdot f(n)$
-* $T(n) = \Omega (g(n))$ 表示存在常数 $C > 0$，$n_0 > 0$ 使得当 $n \geq n_0$ 时有 $T(n) \geq C \cdot g(n)$
-* $T(n) = \theta (g(n))$ 表示同时有 $T(n) = O(h(n))$ 和 $T(n) = \Omega (h(n))$
-
 ![](./assets/12123.png)
+
+## 复杂度分析小窍门
+
+![](./assets/12126.png)
 
 ### 首先要理解什么是数据
 
