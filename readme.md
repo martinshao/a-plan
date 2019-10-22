@@ -86,11 +86,7 @@
   * 最坏情况复杂度 ![](http://latex.codecogs.com/gif.latex?T_%7Bworst%7D%28n%29)
   * 平均复杂度 ![](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20T_%7Bavg%7D%28n%29)
 
-<div align=center>!["math"](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5Cfn_phv%20%5Clarge%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29)</div>
-
-<img align=center width="150" height="50" src="http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5Cfn_phv%20%5Clarge%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29"/>
-
-<div align=center><img width="150" height="50" src="http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5Cfn_phv%20%5Clarge%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29"/></div>
+<div align=center><img width="150" height="20" src="http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5Cfn_phv%20%5Clarge%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29"/></div>
 
 
 ### 首先要理解什么是数据
