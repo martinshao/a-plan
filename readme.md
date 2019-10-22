@@ -88,9 +88,9 @@
 
 $$T_{avg}(n) \leq T_{worst}(n)$$
 
-![](http://latex.codecogs.com/gif.latex?\\T_{avg}(n) \leq T_{worst}(n))
+![](http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)})
 
-<img src="http://latex.codecogs.com/gif.latex?1+sin(x)" border="0"/>
+
 
 
 
