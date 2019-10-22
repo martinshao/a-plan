@@ -102,9 +102,6 @@ $$T_{avg}(n) \leq T_{worst}(n)$$
 <img src="http://chart.googleapis.com/chart?cht=tx&chl= 在此插入Latex公式" style="border:none;">
 
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-
 ### 首先要理解什么是数据
 
 ![data image](./assets/ZVFbuq.png "data image")
