@@ -83,7 +83,7 @@
 ## 什么是好的算法？
 
 * 在分析一般算法的 效率时，我们经常关注下面两种复杂度
-  * 最坏情况复杂度 $T_{worst}(n)$
+  * 最坏情况复杂度 ![](http://latex.codecogs.com/gif.latex?T_%7Bworst%7D%28n%29)
   * 平均复杂度 $T_{avg}(n)$
 
 $$T_{avg}(n) \leq T_{worst}(n)$$
