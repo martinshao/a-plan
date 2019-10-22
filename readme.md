@@ -88,6 +88,23 @@
 
 $$T_{avg}(n) \leq T_{worst}(n)$$
 
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial J}{\partial \theta_k^{(j)}}=\sum_{i:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)x_k^{(i)}}+\lambda \theta_k^{(j)}" />
+
+![](http://latex.codecogs.com/gif.latex?\\frac{1}{1+sin(x)})
+
+<img src="http://latex.codecogs.com/gif.latex?1+sin(x)" border="0"/>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+
+
+<img src="http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;">
+
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= 在此插入Latex公式" style="border:none;">
+
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+
 ### 首先要理解什么是数据
 
 ![data image](./assets/ZVFbuq.png "data image")
