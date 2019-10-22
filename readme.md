@@ -84,11 +84,9 @@
 
 * 在分析一般算法的 效率时，我们经常关注下面两种复杂度
   * 最坏情况复杂度 ![](http://latex.codecogs.com/gif.latex?T_%7Bworst%7D%28n%29)
-  * 平均复杂度 $T_{avg}(n)$
+  * 平均复杂度 ![](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20T_%7Bavg%7D%28n%29)
 
-$$T_{avg}(n) \leq T_{worst}(n)$$
-
-![](http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)})
+![](http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29)
 
 
 
