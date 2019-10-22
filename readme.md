@@ -88,6 +88,13 @@
 
 <div align=center><img width="150" height="20" src="http://latex.codecogs.com/gif.latex?%5Cdpi%7B120%7D%20%5Cfn_phv%20%5Clarge%20T_%7Bavg%7D%28n%29%20%5Cleq%20T_%7Bworst%7D%28n%29"/></div>
 
+## 复杂的渐进表示法
+
+* $T(n) = O(f(n))$ 表示存在常数 $C>0$，$n_0>0$ 使得当 $n \geq n_0$ 时有 $T(n) \leq C \cdot f(n)$
+* $T(n) = \Omega (g(n))$ 表示存在常数 $C > 0$，$n_0 > 0$ 使得当 $n \geq n_0$ 时有 $T(n) \geq C \cdot g(n)$
+* $T(n) = \theta (g(n))$ 表示同时有 $T(n) = O(h(n))$ 和 $T(n) = \Omega (h(n))$
+
+![](./assets/12123.png)
 
 ### 首先要理解什么是数据
 
