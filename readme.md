@@ -176,5 +176,9 @@
 ## 学习算法的好网站
 
 * [VisuAlgo][101]数据结构和算法动态可视化 (Chinese)
+* [Data Structure Visualizations][102]
+* [数据结构与算法教程][103]
 
 [101]: https://visualgo.net/zh
+[102]: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+[103]: http://data.biancheng.net/
