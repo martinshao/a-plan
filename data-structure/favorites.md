@@ -39,6 +39,8 @@
 * [初学者应该了解的数据结构： Tree][505]
 * [用 JavaScript 描述数据结构之树][506]
 * [为什么我要放弃javaScript数据结构与算法（第八章）—— 树][507]
+* [数据结构与算法——AVL树类的C++实现][508]
+* [漫画：什么是优先队列？][509]
 
 [501]: https://www.yiibai.com/data_structure/avl-tree.html
 [502]: https://www.bbsmax.com/A/kmzLXVYYzG/
@@ -47,3 +49,5 @@
 [505]: https://www.zcfy.cc/article/tree-data-structures-for-beginners
 [506]: https://zcdll.github.io/2018/04/06/js-data-structure-tree/
 [507]: http://laibh.top/2018-11-05-JavaScipt%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95Part8.html
+[508]: http://www.itboth.com/d/UZRreq/c++
+[509]: https://www.itcodemonkey.com/article/9681.html
