@@ -1,16 +1,16 @@
-var len;    // 因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+var len; // 因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
 
-function buildMaxHeap(arr) {   // 建立大顶堆
+function buildMaxHeap(arr) { // 建立大顶堆
   len = arr.length;
   for (var i = Math.floor(len / 2); i >= 0; i--) {
     heapify(arr, i);
   }
 }
 
-function heapify(arr, i) {     // 堆调整
+function heapify(arr, i) { // 堆调整
   var left = 2 * i + 1,
-      right = 2 * i + 2,
-      largest = i;
+    right = 2 * i + 2,
+    largest = i;
 
   if (left < len && arr[left] > arr[largest]) {
     largest = left;
@@ -46,3 +46,4 @@ function heapSort(arr) {
 let arr = [2, 7, 26, 25, 19, 17, 1, 90, 3, 36];
 
 let sortArr = heapSort(arr);
+console.info(sortArr)

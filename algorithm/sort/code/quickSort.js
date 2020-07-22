@@ -3,10 +3,8 @@ function quickSort(arr, left, right) {
     partitionIndex,
     left = typeof left != 'number' ? 0 : left,
     right = typeof right != 'number' ? len - 1 : right;
-
   if (left < right) {
     partitionIndex = partition(arr, left, right);
-    console.info(partitionIndex)
     quickSort(arr, left, partitionIndex - 1);
     quickSort(arr, partitionIndex + 1, right);
   }
@@ -33,11 +31,9 @@ function partition(arr, left, right) {
 }
 
 function swap(arr, i, j) {
-  var temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
+  [arr[i], arr[j]] = [arr[j], arr[i]]
 }
 
-let arr = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48];
+let arr = [15, 44, 38, 5, 47, 3, 36, 26, 27, 2, 46, 4, 19, 50, 48];
 
 let sortArr = quickSort(arr);
