@@ -1,6 +1,6 @@
 # 十大排序算法总结（JavaScript实现）
 
-![](../../assets/1212.png)
+![](../assets/sort-xmind.png)
 ![](../../assets/20191021205438.png)
 
 ``` js
