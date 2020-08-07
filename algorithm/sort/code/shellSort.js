@@ -18,12 +18,13 @@ function shellSort(arr) {
 
 let arr = [4, 10, 9, 5, 0, 9, 3, 5, 3, 10];
 let arrSorted = shellSort(arr);
+console.info(arrSorted)
 
 function shellSort(arr) {
   var len = arr.length,
     temp,
     gap = 1;
-  while (gap < len / 3) {         // 动态定义间隔序列
+  while (gap < len / 3) { // 动态定义间隔序列
     gap = gap * 3 + 1;
   }
   for (gap; gap > 0; gap = Math.floor(gap / 3)) {

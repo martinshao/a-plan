@@ -12,3 +12,7 @@ function insertionSort(arr) {
   }
   return arr;
 }
+
+let arr = [4, 10, 9, 5, 0, 9, 3, 5, 3, 10];
+let arrSorted = insertionSort(arr);
+console.info(arrSorted)
