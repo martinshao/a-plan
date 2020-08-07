@@ -64,7 +64,7 @@ function bubbleSort(arr) {
 **代码示例：**
 ``` js
 function insertionSort(arr) {
-  let len = arr.length;
+  const len = arr.length;
   let preIndex, current;
   for (let i = 1; i < len; i++) {
     preIndex = i - 1;
@@ -73,9 +73,9 @@ function insertionSort(arr) {
       arr[preIndex + 1] = arr[preIndex];
       preIndex--;
     }
-    arr[preIndex + 1] = current;
+    arr[preIndex + 1] = current
   }
-  return arr;
+  return arr
 }
 ```
 
@@ -96,18 +96,16 @@ function insertionSort(arr) {
 **代码示例：**
 ``` js
 function selectionSort(arr) {
-  var len = arr.length;
-  var minIndex, temp;
-  for (var i = 0; i < len - 1; i++) {
+  const len = arr.length
+  let minIndex;
+  for (let i = 0; i < len - 1; i++) {
     minIndex = i;
-    for (var j = i + 1; j < len; j++) {
-      if (arr[j] < arr[minIndex]) {
-        minIndex = j;
-      }
+    for (let j = i + 1; j < len; j++) {
+      if (arr[minIndex] > arr[j]) minIndex = j;
     }
-    swap(arr, i, minIndex);
+    swap(arr, minIndex, i)
   }
-  return arr;
+  return arr
 } 
 ```
 
@@ -151,7 +149,7 @@ function shellSort(arr) {
 ## 归并排序
 
 **工作原理：**
-> 归并排序是采用**分支法(Divide and Conquer)**的典型应用。将已有序的子序列合并，得到完全有序的序列。即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，就称为 2-路归并。
+> 归并排序是采用 **分支法(Divide and Conquer)** 的典型应用。将已有序的子序列合并，得到完全有序的序列。即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，就称为 2-路归并。
 
 **过程描述：**
 > 1. 把长度为n的输入序列分成两个长度为n/2的子序列；
