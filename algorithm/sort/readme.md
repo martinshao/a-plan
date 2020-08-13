@@ -127,22 +127,18 @@ function selectionSort(arr) {
 **代码示例：**
 ``` js
 function shellSort(arr) {
-  var len = arr.length,
-    temp,
-    gap = 1;
-  while (gap < len / 3) {         // 动态定义间隔序列
-    gap = gap * 3 + 1;
-  }
-  for (gap; gap > 0; gap = Math.floor(gap / 3)) {
-    for (var i = gap; i < len; i++) {
-      temp = arr[i];
-      for (var j = i - gap; j > 0 && arr[j] > temp; j -= gap) {
-        arr[j + gap] = arr[j];
+  const len = arr.length;
+  let h = 1;
+  while (h < len / 3) h = 3 * h + 1;
+  while (h >= 1) {
+    for (let i = h; i < len; i++) {
+      for (let j = i; j >= h && less(arr[j], arr[j - h]); j -= h) {
+        swap(arr, j, j - h)
       }
-      arr[j + gap] = temp;
     }
+    h = Math.floor(h / 3);
   }
-  return arr;
+  return arr
 }
 ```
 
@@ -163,34 +159,34 @@ function shellSort(arr) {
 **代码示例：**
 ``` js
 function mergeSort(arr) {
-  var len = arr.length;
-  if (len < 2) {
-    return arr;
-  }
-  var middle = Math.floor(len / 2),
+  const len = arr.length
+  if (len < 2) return arr;
+
+  const middle = Math.floor(len / 2),
     left = arr.slice(0, middle),
     right = arr.slice(middle);
   return merge(mergeSort(left), mergeSort(right));
 }
 
 function merge(left, right) {
-  var result = [];
-
+  const result = []
   while (left.length > 0 && right.length > 0) {
-    if (left[0] <= right[0]) {
-      result.push(left.shift());
+    if (left[0] > right[0]) {
+      result.push(right.shift())
     } else {
-      result.push(right.shift());
+      result.push(left.shift())
     }
   }
 
-  while (left.length)
-    result.push(left.shift());
+  while (left.length) {
+    result.push(left.shift())
+  }
 
-  while (right.length)
-    result.push(right.shift());
+  while (right.length) {
+    result.push(right.shift())
+  }
 
-  return result;
+  return result
 }
 ```
 
@@ -200,11 +196,11 @@ function merge(left, right) {
 > 快速排序是对冒泡排序的一种改进。通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
 
 **过程描述：**
-> 快速排序使用分治法来把一个串（list）分为两个子串（sub-lists）
-> 1. 设定一个分界值。可以从数列中挑出一个元素，并且称为基准(pivot)，通过基准值将数组分成左右两部分；
-> 2. 将大于或等于基准值的数据集中到数组右边，小于基准值的数据集中到数组的左边。此时，左边部分中各元素都小于或等于分界值，而右边部分中各元素都大于或等于基准值，这个称为分区（partition）操作；
+> 快速排序使用分治法来把一个串 `(list)` 分为两个子串 `(sub-lists)`
+> 1. 设定一个分界值。可以从数列中挑出一个元素，并且称为基准 `(pivot)` ，通过基准值将数组分成左右两部分；
+> 2. 将大于或等于基准值的数据集中到数组右边，小于基准值的数据集中到数组的左边。此时，左边部分中各元素都小于或等于分界值，而右边部分中各元素都大于或等于基准值，这个称为分区 `(partition)` 操作；
 > 3. 然后，左边和右边的数据可以独立排序。对于左侧的数组数据，又可以取一个分界值，将该部分数据分成左右两部分，同样在左边放置较小值，右边放置较大值。右侧的数组数据也可以做类似处理。
-> 4. 重复上述过程。其实用的就是递归(recursive)
+> 4. 重复上述过程。其实用的就是递归 `(recursive)`
 
 **动画图解：**
 
@@ -239,4 +235,3 @@ function partition(arr, left, right) {
   return slow - 1;
 }
 ```
-
