@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getAllCombin(array, n, sum, temp) {
+      if (temp.length === n) {
+        if (temp.reduce((t, c) => t + c) === sum) {
+          return temp;
+        }
+        return;
+      }
+      for (let i = 0; i < array.length; i++) {
+        const current = array.shift();
+        temp.push(current);
+        const result = getAllCombin(array, n, sum, temp);
+        if (result) {
+          return result;
+        }
+        temp.pop();
+        array.push(current);
+      }
+    }
+    const arr = [1, 2, 3, 4, 5, 6];
+
+    console.log(getAllCombin(arr, 3, 10, []));
+  </script>
+</body>
+
+</html>
