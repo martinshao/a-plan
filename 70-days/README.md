@@ -74,3 +74,42 @@ function missingNumber(nums) {
   return -1;
 }
 ```
+
+### 78. 子集
+
+给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
+
+说明：解集不能包含重复的子集。
+
+```js
+输入: nums = [1, 2, 3];
+输出: [[3], [1], [2], [1, 2, 3], [1, 3], [2, 3], [1, 2], []];
+```
+
+```js
+function subsets(nums) {
+  const ans = [];
+  const n = nums.length;
+  for (let mask = 0; mask < 1 << n; ++mask) {
+    const t = [];
+    for (let i = 0; i < n; ++i) {
+      if (mask & (1 << i)) {
+        t.push(nums[i]);
+      }
+    }
+    ans.push(t);
+  }
+  return ans;
+}
+```
+
+### 90. 子集 II
+
+给定一个可能包含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
+
+说明：解集不能包含重复的子集。
+
+```js
+输入: [1, 2, 2];
+输出: [[2], [1], [1, 2, 2], [2, 2], [1, 2], []];
+```

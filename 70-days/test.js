@@ -1,12 +1,19 @@
-function missingNumber(nums) {
-  const set = new Set(nums)
-  for (let i = 0; i < nums.length + 1; i++) {
-    if (!set.has(i)) {
-      return i
+function subsets(nums) {
+  const ans = [];
+  const n = nums.length;
+  for (let mask = 0; mask < (1 << n); ++mask) {
+    const t = [];
+    for (let i = 0; i < n; ++i) {
+      if (mask & (1 << i)) {
+        // if (mask & (1 << i)) {
+        t.push(nums[i]);
+      }
     }
+    ans.push(t);
   }
+  return ans;
 };
 
-const nums = [9, 6, 4, 2, 3, 5, 7, 0, 1]
+const nums = [1, 2, 3]
 
-console.info(missingNumber(nums))
+console.info(subsets(nums))
