@@ -37,3 +37,4 @@ function swap(arr, i, j) {
 let arr = [15, 44, 38, 5, 47, 3, 36, 26, 27, 2, 46, 4, 19, 50, 48];
 
 let sortArr = quickSort(arr);
+console.info(sortArr)

@@ -225,7 +225,7 @@ function quickSort(arr, left, right) {
 function partition(arr, left, right) {
   var pivot = left,
       slow = pivot + 1;
-  for (var fast = slow; fast <= right; i++) {
+  for (var fast = slow; fast <= right; fast++) {
     if (arr[fast] < arr[pivot]) {
       swap(arr, fast, slow);
       slow++;
