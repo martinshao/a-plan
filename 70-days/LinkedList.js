@@ -112,3 +112,4 @@ const l1 = ArrayToLinkedList2([1, 2, 4])
 const l2 = ArrayToLinkedList2([1, 3, 4])
 
 console.info(mergeTwoLists(l1, l2))
+

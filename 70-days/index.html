@@ -6,11 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- <script src="./test.js"></script> -->
-  <script src="./LinkedList.js"></script>
+  <!-- <script src="./LinkedList.js"></script> -->
 </head>
 
 <body>
 
 </body>
+<script>
+  var search = function (nums, target) {
+    const len = nums.length
+    let left = 0,
+      right = len - 1,
+      mid
+    while (left <= right) {
+      console.info('b', left, mid, right)
+      mid = left + ((right - left) >> 1)
+      console.info('a', left, mid, right)
+      if (nums[mid] === target) {
+        return mid
+      } else if (nums[mid] > target) {
+        right = mid - 1
+      } else {
+        left = mid + 1
+      }
+    }
+    return -1
+  };
+
+  const nums = [-1, 0, 3, 5, 9, 12],
+    target = 1
+  console.info(search(nums, target))
+</script>
 
 </html>

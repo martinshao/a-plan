@@ -2,9 +2,17 @@
 
 ![70days-leetcode-svg](../assets/LeetCode70days.svg)
 
+## 索引
+
+- 数据结构
+  - 数组
+- 算法
+  - 二分法
+    - [704.二分查找法](#704-二分查找)
+
 ## 数组
 
-### 1.两数之和
+### 1. 两数之和
 
 给定一个整数数组 nums  和一个目标值 target，请你在该数组中找出和为目标值的那   两个   整数，并返回他们的数组下标。
 
@@ -123,4 +131,134 @@ function subsets(nums) {
 ```js
 输入: 1->2->3->4->5->NULL
 输出: 5->4->3->2->1->NULL
+```
+
+## 二分法
+
+### 704. 二分查找
+
+给定一个  n  个元素有序的（升序）整型数组  nums 和一个目标值  target  ，写一个函数搜索  nums  中的 target，如果目标值存在返回下标，否则返回 -1。
+
+```js
+示例1:
+输入: nums = [-1,0,3,5,9,12], target = 9
+输出: 4
+解释: 9 出现在 nums 中并且下标为 4
+
+示例2:
+输入: nums = [-1,0,3,5,9,12], target = 2
+输出: -1
+解释: 2 不存在 nums 中因此返回 -1
+```
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var search = function (nums, target) {
+  const len = nums.length;
+  let left = 0,
+    right = len - 1,
+    mid;
+  while (left <= right) {
+    mid = left + Math.floor((right - left) / 2);
+    if (nums[mid] > target) {
+      right = mid - 1;
+    } else if (nums[mid] < target) {
+      left = mid + 1;
+    } else {
+      return mid;
+    }
+  }
+  return -1;
+};
+```
+
+> 备注:
+> `mid = left + Math.floor((right - left) / 2);` 的写法可以替换为
+> `mid = left + ((right - left) >> 1)` 这种写法就是用位运算的除以 2 写法，还能向下取整。
+
+### 35. 搜索插入位置
+
+给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
+
+你可以假设数组中无重复元素。
+
+```js
+e.g. 1:
+输入: [1, 3, 5, 6], 5;
+输出: 2;
+
+e.g. 2:
+输入: [1, 3, 5, 6], 2;
+输出: 1;
+
+e.g. 3:
+输入: [1, 3, 5, 6], 7;
+输出: 4;
+
+e.g. 4:
+输入: [1, 3, 5, 6], 0;
+输出: 0;
+```
+
+```js
+var searchInsert = function (nums, target) {
+  let len = nums.length;
+
+  while (len) {
+    if (target > nums[len - 1]) {
+      return len;
+    } else {
+      len--;
+    }
+  }
+  return len;
+};
+
+var searchInsert = function (nums, target) {
+  const n = nums.length;
+  let left = 0,
+    right = n - 1,
+    ans = n;
+  while (left <= right) {
+    let mid = left + ((right - left) >> 1);
+    if (target <= nums[mid]) {
+      ans = mid;
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+  return ans;
+};
+```
+
+### 162. 寻找峰值
+
+峰值元素是指其值大于左右相邻值的元素。
+
+给定一个输入数组  nums，其中 nums[i] ≠ nums[i+1]，找到峰值元素并返回其索引。
+
+数组可能包含多个峰值，在这种情况下，返回任何一个峰值所在位置即可。
+
+你可以假设  nums[-1] = nums[n] = -∞。
+
+```js
+e.g. 1:
+输入: nums = [1,2,3,1]
+输出: 2
+解释: 3 是峰值元素，你的函数应该返回其索引 2。
+
+e.g. 2:
+输入: nums = [1,2,1,3,5,6,4]
+输出: 1 或 5
+解释: 你的函数可以返回索引 1，其峰值元素为 2；
+     或者返回索引 5， 其峰值元素为 6。
+```
+
+``` js
+
 ```
