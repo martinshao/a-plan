@@ -13,29 +13,43 @@
 
 </body>
 <script>
-  var search = function (nums, target) {
-    const len = nums.length
+  /**
+   * @param {character[]} s
+   * @return {void} Do not return anything, modify s in-place instead.
+   */
+  /**
+   * @param {number[]} nums
+   * @param {number} val
+   * @return {number}
+   */
+  var isPalindrome = function (s) {
     let left = 0,
-      right = len - 1,
-      mid
+      right = s.length - 1;
+    const reg = /[A-Za-z]/
     while (left <= right) {
-      console.info('b', left, mid, right)
-      mid = left + ((right - left) >> 1)
-      console.info('a', left, mid, right)
-      if (nums[mid] === target) {
-        return mid
-      } else if (nums[mid] > target) {
-        right = mid - 1
-      } else {
-        left = mid + 1
+      if (!reg.test(s[left])) {
+        left++
+        continue
+      }
+
+      if (!reg.test(s[right])) {
+        right--
+        continue
+      }
+      if (reg.test(s[left] && reg.test(s[right]))) {
+        if (s[left].toLowerCase() !== s[right].toLowerCase()) {
+          return false
+        } else {
+          left++;
+          right--;
+        }
       }
     }
-    return -1
+    return true
   };
 
-  const nums = [-1, 0, 3, 5, 9, 12],
-    target = 1
-  console.info(search(nums, target))
+  const str = "A man, a plan, a canal: Panama"
+  console.info(isPalindrome(str))
 </script>
 
 </html>
