@@ -19,15 +19,15 @@ function quickSort(arr, left, right) {
  */
 function partition(arr, left, right) {
   var pivot = left,
-    index = pivot + 1;
-  for (var i = index; i <= right; i++) {
-    if (arr[i] < arr[pivot]) {
-      swap(arr, i, index);
-      index++;
+    slow = pivot + 1;
+  for (var fast = slow; fast <= right; fast++) {
+    if (arr[fast] < arr[pivot]) {
+      swap(arr, fast, slow);
+      slow++;
     }
   }
-  swap(arr, pivot, index - 1);
-  return index - 1;
+  swap(arr, pivot, slow - 1);
+  return slow - 1;
 }
 
 function swap(arr, i, j) {
