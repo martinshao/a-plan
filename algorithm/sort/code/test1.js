@@ -1,24 +1,47 @@
-function swap(arr, i, j) {
-  [arr[i], arr[j]] = [arr[j], arr[i]]
+// const curry = function(fn) {
+//   const args = Array.from(arguments).slice(1)
+//   return function () {
+//     const newArgs = args.concat(Array.from(arguments))
+//     return fn.apply(this, newArgs)
+//   }
+// }
+
+// function curry(fn, length) {
+//   length = length || fn.length
+
+//   const slice = Array.prototype.slice
+
+//   return function() {
+//     if (arguments.length < length) {
+//       const combined = [fn].concat(slice.call(arguments))
+//       return curry(sub_curry.apply(this, combined), length - arguments.length)
+//     } else {
+//       return fn.apply(this, arguments)
+//     }
+//   }
+// }
+
+// function add(a, b) {
+//   return a + b;
+// }
+
+// var addCurry = curry(add, 1, 2);
+// console.info(addCurry()) // 3
+// //或者
+// var addCurry = curry(add, 1);
+// console.info(addCurry(2)) // 3
+// //或者
+// var addCurry = curry(add);
+// console.info(addCurry(1, 2)) // 3
+
+const curry = (fn, ...args) =>
+  args.length >= fn.length ? fn(...args) : (..._args) => curry(fn, ...args, ..._args)
+
+function add1(x, y, z) {
+  return x + y + z;
 }
-
-function insertionSort(arr) {
-  const len = arr.length
-  let preIndex, current
-
-  for (let i = 1; i < len; i++) {
-    current = arr[i]
-    preIndex = i - 1
-    while (preIndex >= 0 && arr[preIndex] > current) {
-      arr[preIndex + 1] = arr[preIndex]
-      preIndex--
-    }
-    arr[preIndex + 1] = current
-  }
-  return arr
-}
-
-
-const arr = [15, 44, 38, 5, 47, 3, 36, 26, 27, 2, 46, 4, 19, 50, 48];
-const sortArr = insertionSort(arr)
-console.info(sortArr)
+const add = curry(add1);
+console.log(add(1, 2, 3));
+console.log(add(1)(2)(3));
+console.log(add(1, 2)(3));
+console.log(add(1)(2, 3));
